@@ -1,5 +1,5 @@
 const wbook = SpreadsheetApp.getActive();
-  const sheet = wbook.getSheetByName("user");
+  const sheet = wbook.getSheetByName("user"); //ganti dengan nama sheet yg akan di ambil datanya
  function doGet() {
   let data = [];
   const rlen = sheet.getLastRow();
@@ -85,42 +85,6 @@ function doPost(request) {
     
     return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
   }
-
-// if (action == 'update') {
-//   const uuid = data.id;
-//   const values = sheet.getDataRange().getValues(); // mengambil data dari seluruh sheet
-//   let rowToUpdate = -1;
-  
-//   // mencari baris yang memiliki nilai id yang sama dengan uuid
-//   for (let i = 0; i < values.length; i++) {
-//     if (values[i][0] === uuid) {
-//       rowToUpdate = i + 1; // baris dihitung dari 1, sedangkan array dihitung dari 0
-//       break;
-//     }
-//   }
-  
-//   if (rowToUpdate !== -1) { // jika baris ditemukan, lakukan update
-//     sheet.getRange(rowToUpdate, 2).setValue(data.name); // mengupdate nilai pada kolom ke-2 (name)
-//     sheet.getRange(rowToUpdate, 3).setValue(data.username); // mengupdate nilai pada kolom ke-3 (username)
-    
-//     let response = {
-//       "success": true,
-//       "message": "Sukses Update Data",
-//       //"data": request
-//     };
-    
-//     return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
-//   } else { // jika baris tidak ditemukan, kirimkan respon dengan pesan error
-//     let response = {
-//       "success": false,
-//       "message": "Data tidak ditemukan",
-//       //"data": request
-//     };
-    
-//     return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
-//   }
-// }
-
 
 if (action == 'update') {
     if (rowToUpdate !== -1) { // jika baris ditemukan, lakukan update
