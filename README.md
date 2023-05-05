@@ -2,28 +2,33 @@
 melakukan crud dengan spreadsheet seolah olah menjadi database atau sumber datanya dengan melakukan request API
 
 
-Langkah Langkah
++ Langkah Langkah
 1. Buka Google Spreadsheet dan masukan nama atau atribute apa saja di kolom spreadsheet
 NOTES! WAJIB MENYERTAKAN "id" (huruf kecil) di awal kolom sebelum menambah attribute name yg di inginkan
 karena id sudah generate otomatis dengan UUID
-2. lalu buka tab alat dan pilih Google Script
-3. paste code nya
-4. jangan lupa mengganti nama sheet nya dengan sheet yang baru di buat
-5. deploy sebagai web app
+2.  lalu buka tab alat dan pilih Google Script
+3.  paste code nya
+4.  jangan lupa mengganti nama sheet nya dengan sheet yang baru di buat
+5.  deploy sebagai web app
 
 
-Melakukan Request API
++ Melakukan Request API
 
-1. untuk melakukan insert data 
+PARAMETER :
 [link deploy spreadsheet]?action={method}
 
-a. [link deploy] nya ganti dengan link yang di hasilkan ketika deploy bagian web app
-b. dengan menggunakan parameter "?action=" bisa di isikan sebagai
-    - ?action=insert    :  penanda bahwa permintaan sebagai insert data dengan request data di body sesuai kolom spreadsheet
-    - ?action=update    :  penanda bahwa permintaan sebagai update data dengan request data di body berdasarkan id nya 
-    - ?action=delete    :  penanda bahwa permintaan sebagai delete data dengan request data di body delete berdasarkan id
-    - ?action=getbyid   :  penanda bahwa permintaan sebagai get single data dengan request data di body , data yang akan di tampilkan berdasarkan request id 
-c. selesai :)
+1.  [link deploy] nya ganti dengan link yang di hasilkan ketika deploy bagian web app
+2.  METHOD POST ?action=insert
+    penanda bahwa permintaan sebagai insert data dengan request data di body sesuai kolom spreadsheet
+3.  METHOD POST?action=update
+    penanda bahwa permintaan sebagai update data dengan request data di body berdasarkan id nya 
+4.  METHOD POST?action=delete
+    penanda bahwa permintaan sebagai delete data dengan request data di body delete berdasarkan id
+5.  METHOD POST?action=getbyid
+    penanda bahwa permintaan sebagai get single data dengan request data di body , data yang akan di tampilkan berdasarkan request id 
+2.  METHOD GET tanpa parameter action
+    untuk mengembalikan semua list data
+3.  selesai :)
 
 
 SEMOGA BERMANFAAT
