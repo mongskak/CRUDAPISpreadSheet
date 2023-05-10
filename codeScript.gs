@@ -1,5 +1,5 @@
-const wbook = SpreadsheetApp.getActive();
-  const sheet = wbook.getSheetByName("user"); //ganti dengan nama sheet yg akan di ambil datanya
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getActiveSheet();
  function doGet() {
   let data = [];
   const rlen = sheet.getLastRow();
