@@ -8,9 +8,10 @@
   for (let i = 0; i < rows.length; i++){
     const dataRow = rows[i];
     let record={};
-    for (let j=0;j< clen; j++) {
-      record[rows[0][j]] = dataRow[j];
-    }
+  for (let j = 0; j < clen; j++) {
+    const columnName = rows[0][j].replace(/ /g, '_'); // ganti spasi dengan underscore
+    records[columnName] = dataRow[j];
+  }
 
     if (i > 0) {
       data.push(record);
