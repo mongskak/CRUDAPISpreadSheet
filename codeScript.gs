@@ -10,7 +10,7 @@
     let record={};
   for (let j = 0; j < clen; j++) {
     const columnName = rows[0][j].replace(/ /g, '_'); // ganti spasi dengan underscore
-    records[columnName] = dataRow[j];
+    record[columnName] = dataRow[j];
   }
 
     if (i > 0) {
