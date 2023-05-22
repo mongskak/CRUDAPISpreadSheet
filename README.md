@@ -3,13 +3,12 @@ melakukan crud dengan spreadsheet seolah olah menjadi database atau sumber datan
 
 
 + Langkah Langkah
-1. Buka Google Spreadsheet dan masukan nama atau atribute apa saja di kolom spreadsheet
+1. bUAT Google Spreadsheet dan masukan nama atau atribute apa saja di kolom spreadsheet
 NOTES! WAJIB MENYERTAKAN "id" (huruf kecil) di awal kolom sebelum menambah attribute name yg di inginkan
 karena id sudah generate otomatis dengan UUID
 2.  lalu buka tab extensi dan pilih Google Script
 3.  paste code nya
-4.  jangan lupa mengganti nama sheet nya dengan sheet yang baru di buat
-5.  deploy sebagai web app
+4.  deploy sebagai web app
 
 
 + Melakukan Request API
